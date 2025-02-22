@@ -1,90 +1,117 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>DW Fitness - Privacy Policy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
+        .privacy-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #0099ff 100%);
+            color: white;
+            padding: 4rem 0;
         }
-        .contact-form {
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        .section-title {
+            color: #0d6efd;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-right: 15px;
-        }
-        h1 {
-            color: #007bff;
-            margin: 0;
+        .last-updated {
+            font-style: italic;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="contact-form">
-            <div class="header-container">
-                <img src="/logo.png" alt="Logo" class="logo">
-                <h1>Contactez-nous</h1>
-            </div>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="subject" class="form-label">Sujet</label>
-                    <input type="text" class="form-control" id="subject" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-            </form>
-        </div>
+    <div class="privacy-header text-center mb-5">
+        <h1 class="display-4">Privacy Policy</h1>
+        <h2 class="h4">DW Fitness</h2>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+    <div class="container mb-5">
+        <p class="last-updated mb-5">Last Updated: February 21, 2025</p>
 
-            fetch('https://sendemail-qug0.onrender.com/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, subject, message }),
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                document.getElementById('contactForm').reset();
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Une erreur est survenue lors de l\'envoi du message.');
-            });
-        });
-    </script>
+        <section>
+            <h3 class="section-title">1. Introduction</h3>
+            <p>Welcome to DW Fitness. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your information when you use our fitness application.</p>
+        </section>
+
+        <section>
+            <h3 class="section-title">2. Information We Don't Collect</h3>
+            <p>DW Fitness is designed with your privacy in mind. We do not collect:</p>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">Personal identification information</li>
+                <li class="list-group-item">Location data</li>
+                <li class="list-group-item">Usage statistics</li>
+                <li class="list-group-item">Exercise or fitness data</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 class="section-title">3. Local Data Storage</h3>
+            <p>All data in DW Fitness is stored locally on your device:</p>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li>✓ Your saved workout links</li>
+                        <li>✓ Language preferences</li>
+                        <li>✓ App settings</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">4. External Links</h3>
+            <p>Our app allows you to save and access external workout links. Please note:</p>
+            <div class="alert alert-info">
+                <ul class="mb-0">
+                    <li>We are not responsible for the content of external websites</li>
+                    <li>External websites have their own privacy policies</li>
+                    <li>Review the privacy policies of external websites before sharing any personal information</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">5. Advertising</h3>
+            <p>DW Fitness includes advertising through Google AdMob. Please note:</p>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">AdMob may collect certain device information and usage data</li>
+                <li class="list-group-item">This data collection is subject to Google's Privacy Policy</li>
+                <li class="list-group-item">You can learn more about AdMob's data practices at <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 class="section-title">6. Children's Privacy</h3>
+            <p>Our app does not knowingly collect any personal information from children under 13. All data storage is local to the device and under parental control.</p>
+        </section>
+
+        <section>
+            <h3 class="section-title">7. Changes to This Policy</h3>
+            <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.</p>
+        </section>
+
+        <section>
+            <h3 class="section-title">8. Contact Us</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    <ul class="list-unstyled mb-0">                       
+                        <li>🌐  <a href="https://dwfitnesscontactform.vercel.app/" target="_blank">Contact Form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 DW Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
